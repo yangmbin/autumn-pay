@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.autumn</groupId>
+		<artifactId>autumn</artifactId>
+		<version>${autumn.version}</version>
+	</parent>
+	<groupId>com.autumn</groupId>
+	<artifactId>autumn-pay</artifactId>
+	<packaging>pom</packaging>
+	<version>0.4.0</version>
+	<modules>
+		<module>autumn-pay-utils</module>
+	</modules>
+	<properties>
+		<autumn.version>0.6.0</autumn.version>
+	</properties>
+	<dependencies>
+		<dependency>
+			<groupId>com.autumn</groupId>
+			<artifactId>autumn-core</artifactId>
+			<version>${autumn.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.autumn</groupId>
+			<artifactId>autumn-redis</artifactId>
+			<version>${autumn.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.autumn</groupId>
+			<artifactId>autumn-mq</artifactId>
+			<version>${autumn.version}</version>
+		</dependency>
+	</dependencies>
+
+	<!--设置私服地址，私有的包从该仓库拉取-->
+	<repositories>
+		<repository>
+			<id>nexus</id>
+			<name>Nexus lirenkj</name>
+			<url>http://maven.guinong.com/repository/maven-public/</url>
+		</repository>
+	</repositories>
+	<build>
+		<plugins>
+			<!-- 编译插件 -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.3.2</version>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+					<encoding>UTF-8</encoding>
+					<compilerArguments>
+						<verbose/>
+						<bootclasspath>${java.home}/lib/rt.jar</bootclasspath>
+					</compilerArguments>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+
+</project>
