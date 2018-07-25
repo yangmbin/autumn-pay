@@ -1,6 +1,9 @@
 ﻿package com.autumn.pay.utils;
 
-/** 
+import com.autumn.util.InvalidCastException;
+import com.autumn.util.TimeSpan;
+
+/**
  数据转换帮助
  
 */
